@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./bg.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+section {
+  display: flex;
+}
+.typing {
+  margin-left: 3px;
+  position: relative;
+}
+.typing::after {
+  position: absolute;
+  content: "";
+  height: 90%;
+  width: 1px;
+  background: white;
+  top: 4px;
+  animation: animate 0.5s infinite ease;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
